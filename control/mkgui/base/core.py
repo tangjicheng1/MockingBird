@@ -3,9 +3,8 @@ import inspect
 import re
 from typing import Any, Callable, Type, Union, get_type_hints
 
-from pydantic import BaseModel
+from pydantic import BaseModel, parse_raw_as
 from pydantic.tools import parse_obj_as
-from pydantic.v1 import parse_raw_as
 
 
 def name_to_title(name: str) -> str:
