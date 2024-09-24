@@ -56,7 +56,7 @@ def launch_ui(port: int = 8501) -> None:
             )
 
         subprocess.run(
-            f"""{python_path} "{sys.executable}" -m streamlit run --server.port={port} --server.headless=True --runner.magicEnabled=False --server.maxUploadSize=50  --browser.gatherUsageStats=False {f.name}""",
+            f"""{python_path} "{sys.executable}" -m streamlit run --server.address 0.0.0.0 --server.port={port} --server.headless=True --runner.magicEnabled=False --server.maxUploadSize=50  --browser.gatherUsageStats=False {f.name}""",
             shell=True,
         )
 
